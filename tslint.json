@@ -13,10 +13,6 @@
     "curly": true,
     "eofline": true,
     "forin": true,
-    "import-blacklist": [
-      true,
-      "rxjs"
-    ],
     "import-spacing": true,
     "indent": [
       true,
@@ -33,10 +29,19 @@
       true,
       {
         "order": [
-          "static-field",
-          "instance-field",
-          "static-method",
-          "instance-method"
+          "public-static-field",
+          "public-static-method",
+          "private-static-field",
+          "private-static-method",
+          "public-instance-field",
+          "protected-instance-field",
+          "private-instance-field",
+          "public-constructor",
+          "protected-constructor",
+          "private-constructor",
+          "public-instance-method",
+          "protected-instance-method",
+          "private-instance-method"
         ]
       }
     ],
@@ -56,10 +61,6 @@
     "no-empty": false,
     "no-empty-interface": true,
     "no-eval": true,
-    "no-inferrable-types": [
-      true,
-      "ignore-params"
-    ],
     "no-misused-new": true,
     "no-non-null-assertion": true,
     "no-shadowed-variable": true,
@@ -87,7 +88,8 @@
     "radix": true,
     "semicolon": [
       true,
-      "always"
+      "always",
+      "ignore-interfaces"
     ],
     "triple-equals": [
       true,
@@ -126,6 +128,11 @@
       "app",
       "kebab-case"
     ],
+    "pipe-naming": [
+      true,
+      "camelCase",
+      "app"
+    ],
     "use-input-property-decorator": true,
     "use-output-property-decorator": true,
     "use-host-property-decorator": true,
@@ -135,6 +142,8 @@
     "use-pipe-transform-interface": true,
     "component-class-suffix": true,
     "directive-class-suffix": true,
-    "invoke-injectable": true
+    "invoke-injectable": true,
+    "no-access-missing-member": true,
+    "templates-use-public": true
   }
 }
